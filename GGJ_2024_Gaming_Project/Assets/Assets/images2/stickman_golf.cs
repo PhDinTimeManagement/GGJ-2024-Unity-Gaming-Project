@@ -17,6 +17,6 @@ public class stickman_golf : MonoBehaviour
     {
         
         if(Input.GetMouseButtonDown(0)){
-        this.animator.SetTrigger("ThrowTrigger");}
+        this.animator.SetTrigger("Trigger");}
     }
 }
