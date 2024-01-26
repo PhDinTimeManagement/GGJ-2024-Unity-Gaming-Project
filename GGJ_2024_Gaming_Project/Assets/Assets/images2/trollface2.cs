@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class trollface : MonoBehaviour
+public class trollface2 : MonoBehaviour
 {
     public GameObject pictureObject;
     
