@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stickman_golf : MonoBehaviour
+public class stickman_right: MonoBehaviour
 {
     Rigidbody2D rigid2D;
     Animator animator;
@@ -16,7 +16,7 @@ public class stickman_golf : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.A)){
-        this.animator.SetTrigger("Trigger");}
+        if(Input.GetKeyDown(KeyCode.L)){
+        this.animator.SetTrigger("rightTrigger");}
     }
 }
