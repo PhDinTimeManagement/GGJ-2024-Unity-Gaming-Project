@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GameDirector : MonoBehaviour
 {
     // Start is called before the first frame update
+    //Gameobject objectA;
+    //Gameobject objectB;
 
     GameObject hpGauge;
     void Start()
@@ -32,8 +34,8 @@ public class GameDirector : MonoBehaviour
 //     void OnCollisionEnter2D(Collision2D collision)
 // {
 //     // Check if the colliding objects are the ones you're interested in
-//     if ((collision.gameObject == object1 && collision.otherCollider.gameObject == object2) ||
-//         (collision.gameObject == object2 && collision.otherCollider.gameObject == object1))
+//     if ((collision.gameObject == objectA && collision.otherCollider.gameObject == objectB)
+//         
 //     {
 //         DecreaseHP();
         
