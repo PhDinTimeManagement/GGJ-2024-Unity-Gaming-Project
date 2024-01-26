@@ -6,6 +6,7 @@ TagManager:
   tags:
   - questionBall
   - Ball
+  - Gadget4
   layers:
   - Default
   - TransparentFX

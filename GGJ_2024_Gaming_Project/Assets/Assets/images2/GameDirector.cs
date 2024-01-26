@@ -17,30 +17,21 @@ public class GameDirector : MonoBehaviour
 
     void Update()
     {
-        
-
-        if(Input.GetKeyDown(KeyCode.A)){
-            
-        DecreaseHP();}
     }
 
 
     public void DecreaseHP(){
-        this.hpGauge.GetComponent<Image>().fillAmount-=2.0f; 
+        this.hpGauge.GetComponent<Image>().fillAmount-=0.1f; 
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Ball"))
+        {
+            Debug.Log("Player collided with the ball");
+            DecreaseHP();
+        }
+    }
 
-
-//     void OnCollisionEnter2D(Collision2D collision)
-// {
-//     // Check if the colliding objects are the ones you're interested in
-//     if ((collision.gameObject == objectA && collision.otherCollider.gameObject == objectB)
-//         
-//     {
-//         DecreaseHP();
-        
-        
-//     }
-// }
     
 }
