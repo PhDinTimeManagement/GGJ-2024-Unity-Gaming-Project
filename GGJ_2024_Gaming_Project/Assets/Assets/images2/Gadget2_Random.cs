@@ -24,14 +24,15 @@ public class Gadget2_Random : MonoBehaviour
         {
             TeleportObject(collision.gameObject);
         }
+        Destroy(this.gameObject);
     }
     
     void TeleportObject(GameObject obj)
     {
-        float minX = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
-        float maxX = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
-        float minY = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
-        float maxY = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
+        float minX = -24f;
+        float maxX = 25f;
+        float minY = -15f;
+        float maxY = 18f;
 
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);

@@ -7,10 +7,8 @@ public class Gadget4 : MonoBehaviour
     public float duration = 2.0f; // The duration of each scale change
     public float maxScale = 2.0f; // The maximum scale
     public float minScale = 0.5f; // The minimum scale
-    private bool isChangingScale = false;
 
-    [SerializeField] private GameObject ball;
-    private float time = 5.0f;
+    private bool isChangingScale = false;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -23,9 +21,9 @@ public class Gadget4 : MonoBehaviour
     }
 
     IEnumerator ToggleScale()
-    {
-        float originalTime = Time.time;
-        while (isChangingScale && Time.time < originalTime + 5.0f)
+    {   
+        float begintime = Time.time;
+        while (isChangingScale && Time.time <= begintime + 5.0f)
         {
             // Grow
             float endTime = Time.time + duration;
@@ -43,7 +41,6 @@ public class Gadget4 : MonoBehaviour
                 yield return null;
             }
         }
-
-        Destroy(ball,time);
+            Destroy(this.gameObject);
     }
 }
