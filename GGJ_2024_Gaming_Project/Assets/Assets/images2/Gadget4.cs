@@ -12,7 +12,7 @@ public class Gadget4 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Gadget4") && !isChangingScale)
+        if (collision.gameObject.CompareTag("Ball") && !isChangingScale)
         {
             // Start changing scale
             isChangingScale = true;
@@ -41,6 +41,6 @@ public class Gadget4 : MonoBehaviour
                 yield return null;
             }
         }
-            Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 }
